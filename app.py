@@ -10,10 +10,10 @@ from PIL import Image
 MODEL_PATH = "waste_resnet50_final.keras"   # model path
 model = tf.keras.models.load_model(MODEL_PATH)
 
-# ✅ Class Names (same order as training)
+# Class Names (same order as training)
 class_names = ["cardboard", "glass", "metal", "paper", "plastic", "trash"]
 
-st.title("♻️ Waste Classification Web App")
+st.title(" Waste Classification Web App")
 st.write("Upload an image and the model will predict its category.")
 
 # ==========================
@@ -40,7 +40,7 @@ if uploaded_file is not None:
     confidence = np.max(preds)
     class_idx = np.argmax(preds)
 
-    # ✅ Show Debug Info
+    # Show Debug Info
     st.write("Class Order:", class_names)
     st.write("Raw Prediction:", preds)
 
