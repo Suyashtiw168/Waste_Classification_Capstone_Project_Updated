@@ -7,7 +7,7 @@ from PIL import Image
 # ==========================
 # Load Model
 # ==========================
-MODEL_PATH = "waste_resnet50_final.keras"   # apna model path
+MODEL_PATH = "waste_resnet50_final.keras"   # model path
 model = tf.keras.models.load_model(MODEL_PATH)
 
 # ✅ Class Names (same order as training)
@@ -29,8 +29,8 @@ if uploaded_file is not None:
     # ==========================
     # Preprocess Image
     # ==========================
-    img = img.resize((224, 224))   # ✅ match training input
-    img_array = np.array(img) / 255.0   # ✅ normalize
+    img = img.resize((224, 224))   # match training input
+    img_array = np.array(img) / 255.0   #  normalize
     img_array = np.expand_dims(img_array, axis=0)
 
     # ==========================
