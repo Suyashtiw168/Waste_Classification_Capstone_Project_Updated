@@ -45,7 +45,7 @@ if uploaded_file is not None:
     st.write("Raw Prediction:", preds)
 
     if confidence < 0.6:
-        st.warning(f"⚠️ Not confident. Maybe: **{class_names[class_idx]}** ({confidence:.2f})")
+        st.warning(f" Not confident. Maybe: **{class_names[class_idx]}** ({confidence:.2f})")
     else:
-        st.success(f"✅ Predicted: **{class_names[class_idx]}** | Confidence: {confidence:.2f}")
+        st.success(f" Predicted: **{class_names[class_idx]}** | Confidence: {confidence:.2f}")
 
